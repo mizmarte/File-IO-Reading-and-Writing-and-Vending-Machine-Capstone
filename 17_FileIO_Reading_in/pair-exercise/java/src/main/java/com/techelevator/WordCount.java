@@ -32,25 +32,24 @@ public class WordCount {
 			
 			String line = "";
 			int counter = 0;
-			while(scanner.hasNext()) // when should we stop looping? when there are no more lines
+			while(scanner.hasNext()) 
 			{
 				line = scanner.next();
 				counter++;	
 			}
-			System.out.println("Word Count: " + counter);
 			
-				int wordCount = 0;
-				int sentenceCounter = 0;
-				while(scanner.hasNext())
-				{
-					 line = scanner.next();
-					 wordCount++;
+			int sentenceCounter = 0;
+			while(scanner.hasNext())
+			{
+				line = scanner.next();
+				counter++;
 					
-					if(line.endsWith(".") || line.endsWith("!") || line.endsWith("?"))
+				if(line.endsWith(".") || line.endsWith("!") || line.endsWith("?"))
 					{
 						sentenceCounter++;
 					}
 				}
+			System.out.println("Word Count: " + counter);	
 			System.out.println("Sentence Count: " + sentenceCounter);
 		}
 		catch (FileNotFoundException e)

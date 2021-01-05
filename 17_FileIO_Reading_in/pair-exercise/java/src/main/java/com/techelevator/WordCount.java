@@ -32,23 +32,18 @@ public class WordCount {
 			
 			String line = "";
 			int counter = 0;
+			int sentenceCounter = 0;
 			while(scanner.hasNext()) 
 			{
 				line = scanner.next();
 				counter++;	
-			}
-			
-			int sentenceCounter = 0;
-			while(scanner.hasNext())
-			{
-				line = scanner.next();
-				counter++;
-					
+				
 				if(line.endsWith(".") || line.endsWith("!") || line.endsWith("?"))
-					{
-						sentenceCounter++;
-					}
+				{
+					sentenceCounter++;
 				}
+				
+			}
 			System.out.println("Word Count: " + counter);	
 			System.out.println("Sentence Count: " + sentenceCounter);
 		}

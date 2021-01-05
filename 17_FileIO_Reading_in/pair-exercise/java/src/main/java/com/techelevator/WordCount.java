@@ -8,36 +8,55 @@ import java.util.Scanner;
 
 public class WordCount {
 
-	public static void readAliceAdventuresInWonderland() 
+	public static void main(String[] args) 
 	{
-
-		String filePath = "alices_adventures_in_wonderland.txt";
-		File alicesFile = new File(filePath);
+		File alicesFile = new File ("alices_adventures_in_wonderland.txt");
+		if(alicesFile.exists())
+		{
+			readFile(alicesFile);
+		}
+		else
+		{
+			System.out.println("The file does not exist.");
+		}
 		
-		Scanner scanner;
+	}
+	public static void readFile(File alicesFile)
+	{
 		try
 		{
-			scanner = new Scanner(alicesFile.getAbsoluteFile());
+			Scanner scanner = new Scanner(alicesFile);
+//			System.out.println("Reading file: " + alicesFile);
+//			System.out.println("File Path: " + alicesFile.getAbsolutePath());
+		
+			
+			String line = "";
 			int counter = 0;
-			while(scanner.hasNextLine()) // when should we stop looping? when there are no more lines
+			while(scanner.hasNext()) // when should we stop looping? when there are no more lines
 			{
-				
-				
-				String line = scanner.nextLine();
-				String[] parts = line.split(" ");
-				for (String words: parts)
-				{
-					counter++;
-				}
-				
-				System.out.println(counter);
+				line = scanner.next();
+				counter++;	
 			}
-				
+			System.out.println("Word Count: " + counter);
+			
+				int wordCount = 0;
+				int sentenceCounter = 0;
+				while(scanner.hasNext())
+				{
+					 line = scanner.next();
+					 wordCount++;
+					
+					if(line.endsWith(".") || line.endsWith("!") || line.endsWith("?"))
+					{
+						sentenceCounter++;
+					}
+				}
+			System.out.println("Sentence Count: " + sentenceCounter);
 		}
 		catch (FileNotFoundException e)
 		{
 			// TODO Auto-generated catch block
-			System.out.println("File: " + filePath + " was not found.");
+			
 		}
 		
 	}

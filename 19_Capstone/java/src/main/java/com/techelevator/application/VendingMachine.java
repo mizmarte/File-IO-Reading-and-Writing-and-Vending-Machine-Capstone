@@ -18,13 +18,35 @@ public class VendingMachine
             else if(choice.equals("purchase"))
             {
                 // make a purchase
+            	System.out.println("Things to buy");
             }
             else if(choice.equals("exit"))
             {
                 // good bye
                 break;
             }
+            
+            while(true)
+            {
+                String purchase = UserInput.getPurchaseOptions();
+
+                if(purchase.equals("Feed Money"))
+                {
+                    // display the vending machine slots
+                	System.out.println("Insert Money");
+                }
+                else if(purchase.equals("Select product"))
+                {
+                    // make a purchase
+                	System.out.println("Product");
+                }
+                else if(purchase.equals("exit"))
+                {
+                    // good bye
+                    break;
+                }
         }
     }
     
+    }
 }

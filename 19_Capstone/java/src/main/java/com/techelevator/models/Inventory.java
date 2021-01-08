@@ -16,6 +16,7 @@ public class Inventory
 	private void loadInventory()
 	{
 		FileProductLoader loader = new FileProductLoader();
+
 		
 	}
 	

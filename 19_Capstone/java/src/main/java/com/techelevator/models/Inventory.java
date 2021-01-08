@@ -16,9 +16,12 @@ public class Inventory
 	private void loadInventory()
 	{
 		FileProductLoader loader = new FileProductLoader();
-		
+		items = loader.loadInventory(); //not sure if this is correct
 	}
 	
-	
+	private void getInventory()
+	{
+		//not sure what goes here, since we continue to have issues with Item class
+	}
 
 }

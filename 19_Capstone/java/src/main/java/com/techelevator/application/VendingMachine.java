@@ -25,7 +25,7 @@ public class VendingMachine
                 // good bye
                 break;
             }
-            
+        } 
             while(true)
             {
                 String purchase = UserInput.getPurchaseOptions();
@@ -45,8 +45,11 @@ public class VendingMachine
                     // good bye
                     break;
                 }
-        }
-    }
+            }
     
+    }  
+    public void displayItems()
+    {
+    	//show the products
     }
 }

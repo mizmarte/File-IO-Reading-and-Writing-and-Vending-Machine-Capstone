@@ -11,10 +11,8 @@ public abstract class Item
 	
 public Item(String name, BigDecimal price) 
 	 {
-		
 		this.name = name;
 		this.price = price;
-		
 		
 	 }
 

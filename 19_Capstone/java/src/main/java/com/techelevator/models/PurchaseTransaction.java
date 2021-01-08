@@ -1,5 +1,8 @@
 package com.techelevator.models;
 
+import com.techelevator.models.*;
+import com.techelevator.ui.UserInput;
+
 import java.math.BigDecimal;
 
 public class PurchaseTransaction 
@@ -26,8 +29,13 @@ public class PurchaseTransaction
 
 		BigDecimal moneyInserted = new BigDecimal(0);
 		currentMoneyProvided = currentMoneyProvided.add(moneyInserted);
-		//we may need if statement asking if they are finished adding money - yes return current money provided
-		//, no prompt them to add more
+		BigDecimal moreBones = new BigDecimal(0);
+		
+		
+		if (moreBones.compareTo(BigDecimal.ZERO) > 0)
+		{
+			currentMoneyProvided.add(moneyInserted);
+		}
 		return currentMoneyProvided;
 	}
 	

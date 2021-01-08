@@ -95,11 +95,30 @@ public class UserInput
 	public static BigDecimal getMoneyInput()
 		
 		{
+		//under user input - "adding more money?" String variable moredough(boolean finished adding money)
+		//if moredough equals yes return to beginning of feed money function
+		//if no display current money provided and prompt user to enter selectionfor purchase "please press 2 to select product"
+		//, no prompt them to add more
 			
-			System.out.println("Please insert bills up to 10 dollars: ");
-			
+			System.out.println("Please insert a bill up to 10 dollars: ");
 			BigDecimal moneyInserted = scanner.nextBigDecimal();
 			
+			System.out.println("Adding more money? (yes) or (no)");
+			String moreDough = scanner.nextLine();
+			BigDecimal moreBones = new BigDecimal(0);
+			if (moreDough == "yes")
+			{
+				System.out.println("Insert additional money");
+				moreBones = scanner.nextBigDecimal();
+				moneyInserted.add(moreBones);
+			}
+			else if(moreDough == "no")
+			{
+				System.out.println("Please press 2 to make a purchase");
+			
+			}
+			
+			System.out.println("$" + moneyInserted);
 			return moneyInserted;
 		}
 		

@@ -13,6 +13,7 @@ public class VendingMachine
     {
         while(true)
         {
+        
             String choice = UserInput.getHomeScreenOption();
 
             if(choice.equals("display"))
@@ -52,7 +53,10 @@ public class VendingMachine
                     // good bye
                     break;
                 }
+                
+           
             }
+            
     
     }  
     public void displayItems()

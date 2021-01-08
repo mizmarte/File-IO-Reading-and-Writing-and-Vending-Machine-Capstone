@@ -2,6 +2,8 @@ package com.techelevator.models;
 
 import com.techelevator.models.*;
 import com.techelevator.ui.UserInput;
+import com.techelevator.application.VendingMachine;
+import com.techelevator.models.FileProductLoader;
 
 import java.math.BigDecimal;
 

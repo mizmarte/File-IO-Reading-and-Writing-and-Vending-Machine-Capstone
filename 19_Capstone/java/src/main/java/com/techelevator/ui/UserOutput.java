@@ -29,7 +29,7 @@ public class UserOutput
 				for(Map.Entry<Item, Integer> row : items.entrySet())
 		{
 			
-					System.out.println(row.getKey().getId() + " : " + row.getKey().getName() + " : " + row.getKey().getPrice() + " : " + row.getValue());
+					System.out.println(row.getKey().getId() + " : " + row.getKey().getName() + " : " + row.getKey().getPrice() + " : " + "Qty In Stock : " + row.getValue());
 		}
 	}
 }

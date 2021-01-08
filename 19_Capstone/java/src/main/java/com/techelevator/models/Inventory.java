@@ -18,12 +18,7 @@ public class Inventory
 		loadInventory();
 	}
 	//is a constructor needed for this class
-	//load inventory is a method of the inventory
 	
-//	public Map loadInventory()
-//	{
-//		
-//	}
 //	
 	private void loadInventory()
 	{

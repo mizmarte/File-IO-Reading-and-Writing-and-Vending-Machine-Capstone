@@ -38,7 +38,8 @@ public class VendingMachine
                 if(purchase.equals("Feed Money"))
                 {
                     // display the vending machine slots
-                	System.out.println("Insert Money");
+//                	System.out.println("Insert Money");
+                	UserInput.getMoneyInput();
                 	
                 }
                 else if(purchase.equals("Select product"))

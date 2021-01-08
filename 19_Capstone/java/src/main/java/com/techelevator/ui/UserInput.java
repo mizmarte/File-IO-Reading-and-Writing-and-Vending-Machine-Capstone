@@ -92,12 +92,14 @@ public class UserInput
 			
 		
 		}
-	public static String getMoneyInput()
+	public static BigDecimal getMoneyInput()
 		
 		{
 			
 			System.out.println("Please insert bills up to 10 dollars: ");
-			String moneyInserted = scanner.nextLine();
+			
+			BigDecimal moneyInserted = scanner.nextBigDecimal();
+			
 			return moneyInserted;
 		}
 		

@@ -17,20 +17,15 @@ public class UserOutput
 		System.out.println("*****************");
 		System.out.println();
 	
-//		for(Item item: inventory.getItems()) - how to loop through a map instead of an array list - shopping cart (view cart)
+//		loop through a map instead of an array list - shopping cart (view cart)
 //		{
 
-//	for(Map.Entry<Item, Integer> row : items.entrySet())
-//		{
-//			System.out.println(row.getKey() + " : " + row.getValue());
-//		}
+	
 		
-//		Map<Item, Integer> items = new HashMap<Item, Integer>();
-		
-//		public void add(Item item)
-//		{
-//			// add product or update quantity
-
-//		}
+		Map<Item, Integer> items = new HashMap<Item, Integer>();
+				for(Map.Entry<Item, Integer> row : items.entrySet())
+		{
+			System.out.println(row.getKey() + " : " + row.getValue());
+		}
 	}
 }

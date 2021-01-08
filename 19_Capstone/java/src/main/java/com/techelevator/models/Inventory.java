@@ -22,6 +22,8 @@ public class Inventory
 	private Map<Item, Integer> getInventory()
 	{
 		return items;
+		
+		
 	}
 //add methods to address inventory mgmt once purchases are made
 }

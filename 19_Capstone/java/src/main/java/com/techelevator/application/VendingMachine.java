@@ -1,6 +1,7 @@
 package com.techelevator.application;
 
 import com.techelevator.ui.UserInput;
+import com.techelevator.ui.UserOutput;
 
 public class VendingMachine 
 {
@@ -13,7 +14,7 @@ public class VendingMachine
             if(choice.equals("display"))
             {
                 // display the vending machine slots
-            	System.out.println("displaying items");
+         //   	UserOutput.displayInventory(inventory);
             }
             else if(choice.equals("purchase"))
             {

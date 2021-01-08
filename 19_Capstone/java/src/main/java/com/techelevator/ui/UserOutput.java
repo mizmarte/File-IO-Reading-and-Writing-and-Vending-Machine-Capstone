@@ -1,6 +1,7 @@
 package com.techelevator.ui;
 
 import java.util.HashMap;
+
 import java.util.Map;
 
 import com.techelevator.models.Inventory;
@@ -20,12 +21,13 @@ public class UserOutput
 //		loop through a map instead of an array list - shopping cart (view cart)
 //		{
 
-	
+	Inventory.getInventory()
 		
-		Map<Item, Integer> items = new HashMap<Item, Integer>();
+		
 				for(Map.Entry<Item, Integer> row : items.entrySet())
 		{
-			System.out.println(row.getKey() + " : " + row.getValue());
+			items.put(Item, 5);
+					//System.out.println(row.getKey().getName() + " : " + row.getKey().getId() + row.getValue());
 		}
 	}
 }

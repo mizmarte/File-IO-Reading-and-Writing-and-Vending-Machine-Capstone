@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public class Chip extends Item
 
 {
-	public Chip(String id, String name, BigDecimal price) 
+	public Chip(String name, BigDecimal price) 
 	{
-		super(id, name, price);
+		super(name, price);
 		// TODO Auto-generated constructor stub
 	}
 

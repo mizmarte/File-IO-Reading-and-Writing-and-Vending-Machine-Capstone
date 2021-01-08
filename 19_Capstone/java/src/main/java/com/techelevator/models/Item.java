@@ -7,16 +7,16 @@ public abstract class Item
 	 private String id;
 	 private String name;
 	 private BigDecimal price;
+	 private String type;
 	
-public Item(String id, String name, BigDecimal price) 
+public Item(String name, BigDecimal price) 
 	 {
-		this.id = id;
+		
 		this.name = name;
 		this.price = price;
 		
+		
 	 }
-
-
 
 public String getId()
 {
@@ -31,6 +31,11 @@ public String getName()
 public BigDecimal getPrice() 
 {
 	return price;
+}
+
+public String getType()
+{
+	return type;
 }
 
 public abstract String getMessage();

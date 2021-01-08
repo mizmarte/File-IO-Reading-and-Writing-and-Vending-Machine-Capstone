@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public class Drink extends Item
 {
 	
-	public Drink(String id, String name, BigDecimal price) 
+	public Drink(String name, BigDecimal price) 
 	{
-		super(id, name, price);
+		super(name, price);
 		// TODO Auto-generated constructor stub
 	}
 

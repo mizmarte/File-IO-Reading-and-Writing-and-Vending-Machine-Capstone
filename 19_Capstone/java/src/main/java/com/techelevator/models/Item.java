@@ -9,10 +9,11 @@ public abstract class Item
 	 private BigDecimal price;
 	 private String type;
 	
-public Item(String name, BigDecimal price) 
+public Item(String id, String name, BigDecimal price) 
 	 {
 		this.name = name;
 		this.price = price;
+		this.id = id;
 		
 	 }
 

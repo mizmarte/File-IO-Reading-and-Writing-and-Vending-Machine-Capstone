@@ -19,9 +19,9 @@ public class Inventory
 		items = loader.loadInventory(); //not sure if this is correct
 	}
 	
-	private void getInventory()
+	private Map<Item, Integer> getInventory()
 	{
-		//not sure what goes here, since we continue to have issues with Item class
+		return items;
 	}
-
+//add methods to address inventory mgmt once purchases are made
 }

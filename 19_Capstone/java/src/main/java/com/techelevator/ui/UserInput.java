@@ -1,5 +1,6 @@
 package com.techelevator.ui;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 /**
  * Responsibilities:
@@ -59,7 +60,7 @@ public class UserInput
 		public static String getPurchaseOptions()
 		{
 			System.out.println();
-			System.out.println("What would you like to purchase?");
+			System.out.println("Please select from the options below: ");
 			
 			System.out.println("1) Feed Money");
 			System.out.println("2) Select product");
@@ -89,7 +90,17 @@ public class UserInput
 				return "";
 			}
 			
+		
 		}
+	public static String getMoneyInput()
+		
+		{
+			
+			System.out.println("Please insert bills up to 10 dollars: ");
+			String moneyInserted = scanner.nextLine();
+			return moneyInserted;
+		}
+		
 			
 			
 		}

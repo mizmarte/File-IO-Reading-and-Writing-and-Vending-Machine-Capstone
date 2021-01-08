@@ -16,7 +16,7 @@ public class FileProductLoader
 
 	
 	{
-		File itemPath = new File("vendingmachine.csv.");	
+		File itemPath = new File("vendingmachine.csv");	
 		
 		try
 		{

@@ -13,6 +13,10 @@ public class Inventory
 		return items;
 			
 	}
+	public Inventory()
+	{
+		loadInventory();
+	}
 	//is a constructor needed for this class
 	//load inventory is a method of the inventory
 	

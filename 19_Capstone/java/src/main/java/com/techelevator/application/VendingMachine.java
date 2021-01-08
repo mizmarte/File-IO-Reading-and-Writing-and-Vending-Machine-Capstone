@@ -1,10 +1,14 @@
 package com.techelevator.application;
 
+import com.techelevator.models.*;
 import com.techelevator.ui.UserInput;
 import com.techelevator.ui.UserOutput;
 
 public class VendingMachine 
 {
+	private Inventory inventory = new Inventory();
+//	private PurchaseTransaction purchaseTransaction = new PurchaseTransaction();
+	
     public void run()
     {
         while(true)
@@ -14,7 +18,7 @@ public class VendingMachine
             if(choice.equals("display"))
             {
                 // display the vending machine slots
-         //   	UserOutput.displayInventory(inventory);
+            	UserOutput.displayInventory(inventory);
             }
             else if(choice.equals("purchase"))
             {
@@ -35,6 +39,7 @@ public class VendingMachine
                 {
                     // display the vending machine slots
                 	System.out.println("Insert Money");
+                	
                 }
                 else if(purchase.equals("Select product"))
                 {

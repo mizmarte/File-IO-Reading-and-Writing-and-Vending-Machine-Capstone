@@ -21,13 +21,15 @@ public class UserOutput
 //		loop through a map instead of an array list - shopping cart (view cart)
 //		{
 
-	Inventory.getInventory()
+		
+		Map<Item, Integer> items = inventory.getInventory();
+	
 		
 		
 				for(Map.Entry<Item, Integer> row : items.entrySet())
 		{
-			items.put(Item, 5);
-					//System.out.println(row.getKey().getName() + " : " + row.getKey().getId() + row.getValue());
+			
+					System.out.println(row.getKey().getId() + " : " + row.getKey().getName() + " : " + row.getKey().getPrice() + " : " + row.getValue());
 		}
 	}
 }

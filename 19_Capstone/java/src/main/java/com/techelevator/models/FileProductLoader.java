@@ -46,19 +46,19 @@ public class FileProductLoader
 				
 				if(type.equals("Chip"))
 				{
-					item = new Chip(name, new BigDecimal(price));
+					item = new Chip(id,name, new BigDecimal(price));
 				}
 				else if(type.equals("Candy"))
 				{
-					item = new Candy(name, new BigDecimal(price));
+					item = new Candy(id,name, new BigDecimal(price));
 				}
 				else if(type.equals("Drink"))
 				{
-					item = new Drink(name, new BigDecimal(price));
+					item = new Drink(id,name, new BigDecimal(price));
 				}
 				else if(type.equals("Gum"))
 				{
-					item = new Gum(name, new BigDecimal(price));
+					item = new Gum(id,name, new BigDecimal(price));
 				}
 				
 				items.put(item, 5);
@@ -69,6 +69,7 @@ public class FileProductLoader
 		{
 			
 		}
+		
 		
 		return items;
 	}

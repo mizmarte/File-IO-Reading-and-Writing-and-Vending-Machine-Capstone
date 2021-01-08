@@ -24,7 +24,8 @@ public class VendingMachine
             else if(choice.equals("purchase"))
             {
                 // make a purchase
-            	System.out.println("Things to buy");
+            	UserOutput.displayInventory(inventory);
+            	UserInput.getSelectedProduct();
             }
             else if(choice.equals("exit"))
             {

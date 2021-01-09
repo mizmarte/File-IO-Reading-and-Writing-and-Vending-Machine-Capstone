@@ -47,51 +47,51 @@ public class UserInput
 		}
 		
 	}
-		public static String getSelectedProduct()
-		{
-			System.out.println();
-			System.out.println("Which product do you want?");
-			
-
-			String itemId = scanner.nextLine();
-			return itemId.trim();
-		}
 		
-		public static String getPurchaseOptions()
-		{
-			System.out.println();
-			System.out.println("Please select from the options below: ");
-			
-			System.out.println("1) Feed Money");
-			System.out.println("2) Select product");
-			System.out.println("3) Finish transaction");
-			
-			System.out.println();
-			System.out.print("Please select a choice: ");
-			
-			String selectedPurchase = scanner.nextLine();
-			String purchase = selectedPurchase.trim();
-			
-
-			if(purchase.equals("1"))
-			{
-				return "Feed Money";
-			}
-			else if(purchase.equals("2"))
-			{
-				return "Select product";
-			}
-			else if(purchase.equals("3"))
-			{
-				return "Finish transaction";
-			}
-			else
-			{
-				return "";
-			}
-			
+	public static String getPurchaseOptions()
+	{
+		System.out.println();
+		System.out.println("Please select from the options below: ");
 		
+		System.out.println("1) Feed Money");
+		System.out.println("2) Select product");
+		System.out.println("3) Finish transaction");
+		
+		System.out.println();
+		System.out.print("Please select a choice: ");
+		
+		String selectedPurchase = scanner.nextLine();
+		String purchase = selectedPurchase.trim();
+		
+
+		if(purchase.equals("1"))
+		{
+			return "Feed Money";
 		}
+		else if(purchase.equals("2"))
+		{
+			return "Select product";
+		}
+		else if(purchase.equals("3"))
+		{
+			return "Finish transaction";
+		}
+		else
+		{
+			return "";
+		}
+	}
+	public static String getSelectedProduct()
+	{
+		System.out.println();
+		System.out.println("Which product do you want?");
+		
+
+		String itemId = scanner.nextLine();
+		return itemId.trim();
+	}
+	
+	
 	public static BigDecimal getMoneyInput()
 		
 		{

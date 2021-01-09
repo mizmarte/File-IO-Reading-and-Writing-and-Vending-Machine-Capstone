@@ -81,6 +81,7 @@ public class UserInput
 			return "";
 		}
 	}
+	
 	public static String getSelectedProduct()
 	{
 		System.out.println();

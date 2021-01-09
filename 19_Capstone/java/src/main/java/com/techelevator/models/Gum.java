@@ -15,7 +15,7 @@ public class Gum extends Item
 	{
 		
 		
-		return "Glug Glug, Yum!";
+		return "Chew Chew, Yum!";
 	
 	
 		

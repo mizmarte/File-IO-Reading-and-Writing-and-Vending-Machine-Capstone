@@ -10,12 +10,14 @@ import java.math.BigDecimal;
 public class PurchaseTransaction 
 {
 	private BigDecimal cartTotal;
-	private BigDecimal currentMoneyProvided;
+	private static BigDecimal currentMoneyProvided;
 	
-	public BigDecimal getCartTotal() {
+	public BigDecimal getCartTotal() 
+	{
 		return cartTotal;
 	}
-	public BigDecimal getCurrentMoneyProvided() {
+	public static BigDecimal getCurrentMoneyProvided() 
+	{
 		return currentMoneyProvided;
 	}
 	
@@ -25,9 +27,8 @@ public class PurchaseTransaction
 		this.currentMoneyProvided = currentMoneyProvided;
 	}
 	
-	public BigDecimal feedMoney()
+	public static BigDecimal feedMoney()
 	{
-		
 
 		BigDecimal moneyInserted = new BigDecimal(0);
 		currentMoneyProvided = currentMoneyProvided.add(moneyInserted);
@@ -40,6 +41,11 @@ public class PurchaseTransaction
 		}
 		return currentMoneyProvided;
 	}
+	
+	
+	
+	
+	
 	
 	
 	

@@ -68,15 +68,15 @@ public class UserInput
 
 		if(choice.equals("1"))
 		{
-			return "Feed Money";
+			return "feed";
 		}
 		else if(choice.equals("2"))
 		{
-			return "Select product";
+			return "select";
 		}
 		else if(choice.equals("3"))
 		{
-			return "Finish transaction";
+			return "finish";
 		}
 		else
 		{
@@ -98,10 +98,14 @@ public class UserInput
 	public static BigDecimal getMoneyInput()
 		
 		{
-		//under user input - "adding more money?" String variable moredough(boolean finished adding money)
-		//if moredough equals yes return to beginning of feed money function
-		//if no display current money provided and prompt user to enter selectionfor purchase "please press 2 to select product"
-		//, no prompt them to add more
+		
+			UserOutput.clearScreen();
+			
+			System.out.println("********************************************************");
+			System.out.println("********************************************************");
+			System.out.println("                      FEED ME MONEY!!!");
+			System.out.println("********************************************************");
+			System.out.println("********************************************************");
 			
 			System.out.println("Please insert a bill up to 10 dollars ($1, $2, 5$, or $10 bills only): ");
 			String moneyIn = scanner.nextLine().trim();
@@ -109,20 +113,24 @@ public class UserInput
 			System.out.println(moneyInserted);
 			
 			System.out.println("Adding more money? (yes) or (no)");
-			String moreDough = scanner.nextLine().trim();
+			String moreDoughAnswer = scanner.nextLine().trim();
 			BigDecimal moreBones = new BigDecimal(0);
-			if (moreDough == "yes")
+			
 			{
+				if (moreDoughAnswer.equals("yes"))
 				System.out.println("Insert additional money");
-				moreBones = scanner.nextBigDecimal();
+				String addBones = scanner.nextLine().trim();
+				moreBones = new BigDecimal(addBones);
 				moneyInserted.add(moreBones);
 			}
-			else if(moreDough == "no")
+				if(moreDoughAnswer.equals("no"))
 			{
 				System.out.println("$" + moneyInserted);
 			
 			}
 			 return moneyInserted;
+		 
+			 
 			
 			
 		}

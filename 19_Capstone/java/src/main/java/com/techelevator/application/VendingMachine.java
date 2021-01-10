@@ -16,6 +16,7 @@ public class VendingMachine
     {
         while(true)
         {
+        	UserOutput.displayWelcomeScreen();
         
             String choice = UserInput.getHomeScreenOption();
 
@@ -29,17 +30,18 @@ public class VendingMachine
             	String purchase = UserInput.getPurchaseOptions();
                 // make a purchase
             	UserInput.getPurchaseOptions();
-            	if (purchase.equals("1"))
+            	if (purchase.equals("feed"))
             	{
+            		UserInput.getMoneyInput();
             		PurchaseTransaction.feedMoney();
             		PurchaseTransaction.getCurrentMoneyProvided();
             	}
-            	else if (purchase.equals("2"))
+            	else if (purchase.equals("select"))
             	{
             		UserOutput.displayInventory(inventory);
             		UserInput.getSelectedProduct();
             	}
-            	else if (purchase.equals("3"))
+            	else if (purchase.equals("finish"))
             	{
             		System.out.println("checkout");
             	}

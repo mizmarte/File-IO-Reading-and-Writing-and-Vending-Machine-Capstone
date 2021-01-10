@@ -12,6 +12,7 @@ public class UserOutput
 
 	public static void displayInventory(Inventory inventory)
 	{
+		
 		System.out.println();
 		System.out.println("*****************");
 		System.out.println("    Items");
@@ -32,4 +33,20 @@ public class UserOutput
 					System.out.println(row.getKey().getId() + " : " + row.getKey().getName() + " : " + row.getKey().getPrice() + " : " + "Qty In Stock : " + row.getValue());
 		}
 	}
+	
+	public static void displayItemsToPurchase()
+	{
+		
+	}
+	
+	public static void displayItemDispensed()
+	{
+		
+	}
+	
+	public static void displayItemDispenseMessage()
+	{
+		
+	}
+	
 }

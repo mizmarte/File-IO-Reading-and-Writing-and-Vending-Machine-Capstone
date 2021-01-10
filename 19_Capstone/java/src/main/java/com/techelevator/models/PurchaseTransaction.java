@@ -12,7 +12,6 @@ import java.util.Map;
 
 public class PurchaseTransaction 
 {
-	private BigDecimal cartTotal;
 	private static BigDecimal currentMoneyProvided;
 	Map<Item, Integer> cart = new HashMap<Item, Integer>();
 	
@@ -35,7 +34,7 @@ public class PurchaseTransaction
 	
 	public BigDecimal getCartTotal() 
 	{
-		BigDecimal total = BigDecimal.ZERO;
+		BigDecimal cartTotal = BigDecimal.ZERO;
 		
 		for(Map.Entry<Item, Integer> entry: cart.entrySet())
 		{
@@ -45,19 +44,25 @@ public class PurchaseTransaction
 			BigDecimal price = item.getPrice();
 			BigDecimal lineTotal = price.multiply(multiplier);
 
-			total = total.add(lineTotal);
+			cartTotal = cartTotal.add(lineTotal);
 		}
-		return total;
+		return cartTotal;
 	}
 	public static BigDecimal getCurrentMoneyProvided() 
 	{
 		return currentMoneyProvided;
 	}
 	
-	public PurchaseTransaction(BigDecimal cartTotal, BigDecimal currentMoneyProvided) {
-	
-		this.cartTotal = cartTotal;
-		this.currentMoneyProvided = currentMoneyProvided;
+	public PurchaseTransaction(BigDecimal cartTotal, BigDecimal currentMoneyProvided) 
+	{
+		if (cartTotal.compareTo(currentMoneyProvided) > 0)
+		{
+			System.out.println("You do not have enough money to complete this transaction");
+			System.out.println("Please enter more money");
+		}
+		BigDecimal change = currentMoneyProvided.subtract(cartTotal);
+		
+		//return change;
 	}
 	
 	public static BigDecimal feedMoney()

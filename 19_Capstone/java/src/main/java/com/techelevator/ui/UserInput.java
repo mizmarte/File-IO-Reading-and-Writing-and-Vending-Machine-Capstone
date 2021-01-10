@@ -58,21 +58,23 @@ public class UserInput
 		System.out.println("3) Finish transaction");
 		
 		System.out.println();
+		//System.out.println("Total amount entered: " + <need balance variable>);
+		System.out.println();
 		System.out.print("Please select a choice: ");
 		
-		String selectedPurchase = scanner.nextLine();
-		String purchase = selectedPurchase.trim();
+		String selectedChoice = scanner.nextLine();
+		String choice = selectedChoice.trim();
 		
 
-		if(purchase.equals("1"))
+		if(choice.equals("1"))
 		{
 			return "Feed Money";
 		}
-		else if(purchase.equals("2"))
+		else if(choice.equals("2"))
 		{
 			return "Select product";
 		}
-		else if(purchase.equals("3"))
+		else if(choice.equals("3"))
 		{
 			return "Finish transaction";
 		}
@@ -101,9 +103,10 @@ public class UserInput
 		//if no display current money provided and prompt user to enter selectionfor purchase "please press 2 to select product"
 		//, no prompt them to add more
 			
-			System.out.println("Please insert a bill up to 10 dollars: ");
-			scanner.nextBigDecimal();
-			BigDecimal moneyInserted = new BigDecimal(0);
+			System.out.println("Please insert a bill up to 10 dollars ($1, $2, 5$, or $10 bills only): ");
+			String moneyIn = scanner.nextLine().trim();
+			BigDecimal moneyInserted = new BigDecimal(moneyIn);
+			System.out.println(moneyInserted);
 			
 			System.out.println("Adding more money? (yes) or (no)");
 			String moreDough = scanner.nextLine().trim();
@@ -116,12 +119,12 @@ public class UserInput
 			}
 			else if(moreDough == "no")
 			{
-				System.out.println("Please press 2 to make a purchase");
+				System.out.println("$" + moneyInserted);
 			
 			}
+			 return moneyInserted;
 			
-			System.out.println("$" + moneyInserted);
-			return moneyInserted;
+			
 		}
 		
 			

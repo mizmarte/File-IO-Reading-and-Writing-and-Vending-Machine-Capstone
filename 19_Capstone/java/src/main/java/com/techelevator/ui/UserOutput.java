@@ -14,7 +14,7 @@ public class UserOutput
 	{
 		System.out.println();
 		System.out.println("*****************");
-		System.out.println("    Products");
+		System.out.println("    Items");
 		System.out.println("*****************");
 		System.out.println();
 	

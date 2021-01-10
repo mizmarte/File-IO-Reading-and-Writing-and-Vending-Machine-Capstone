@@ -5,16 +5,49 @@ import com.techelevator.ui.UserInput;
 import com.techelevator.application.VendingMachine;
 import com.techelevator.models.FileProductLoader;
 
+
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PurchaseTransaction 
 {
 	private BigDecimal cartTotal;
 	private static BigDecimal currentMoneyProvided;
+	Map<Item, Integer> cart = new HashMap<Item, Integer>();
+	
+	public void add(Item item)
+	{
+		// add product or update quantity
+		if(cart.containsKey(item))
+		{
+			// update the quantity
+			int quantity = cart.get(item);
+			quantity++;
+			cart.put(item, quantity);
+		}
+		else
+		{
+			// not in cart - so just add it
+			cart.put(item, 1);
+		}
+	}
 	
 	public BigDecimal getCartTotal() 
 	{
-		return cartTotal;
+		BigDecimal total = BigDecimal.ZERO;
+		
+		for(Map.Entry<Item, Integer> entry: cart.entrySet())
+		{
+			Item item = entry.getKey();
+			int quantity = entry.getValue();
+			BigDecimal multiplier = new BigDecimal(quantity);
+			BigDecimal price = item.getPrice();
+			BigDecimal lineTotal = price.multiply(multiplier);
+
+			total = total.add(lineTotal);
+		}
+		return total;
 	}
 	public static BigDecimal getCurrentMoneyProvided() 
 	{

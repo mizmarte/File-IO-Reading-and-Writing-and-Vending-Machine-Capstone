@@ -85,11 +85,11 @@ public class UserInput
 	public static String getSelectedProduct()
 	{
 		System.out.println();
-		System.out.println("Which product do you want?");
+		System.out.println("Please select the item id");
 		
 
 		String itemId = scanner.nextLine();
-		return itemId.trim();
+		return itemId.toUpperCase().trim();
 	}
 	
 	
@@ -102,10 +102,11 @@ public class UserInput
 		//, no prompt them to add more
 			
 			System.out.println("Please insert a bill up to 10 dollars: ");
-			BigDecimal moneyInserted = scanner.nextBigDecimal();
+			scanner.nextBigDecimal();
+			BigDecimal moneyInserted = new BigDecimal(0);
 			
 			System.out.println("Adding more money? (yes) or (no)");
-			String moreDough = scanner.nextLine();
+			String moreDough = scanner.nextLine().trim();
 			BigDecimal moreBones = new BigDecimal(0);
 			if (moreDough == "yes")
 			{
